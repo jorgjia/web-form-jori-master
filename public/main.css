@@ -1,0 +1,21 @@
+/* Basic CSS for front-end code */
+body {
+	background-color: #222;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+h1, h3 {
+	color: #DDD;
+	font-family: HelveticaNeue-Light;
+}
+
+p {
+	margin: 10px;
+	color: rgb(0, 250, 200);
+	font-family: HelveticaNeue-Light;
+}
+
+input {
+	margin: 10px;
+}

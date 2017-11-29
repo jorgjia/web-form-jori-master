@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+  
+}
+
+button {
+    background-color: #C6952B;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 750px;
+}
+.cancelbtn,.signupbtn {
+    float: left;
+    width: 520px;
+}
+
+.container {
+   
+    width:550px;
+    margin-left: 390px;
+}
+label{
+
+  color:#4C8777;
+font-size:20px;
+}
+    </style>
+  </head>
+  <script>
+  $(document).ready(function() {
+  $('.signupbtn').on('click',function(){
+    $.ajax({
+      url:'/signup',
+      type:'POST',
+      data:{
+        username:$('#username').val(),
+                email:$('#email').val(),
+                
+                password:$('#password').val()
+               
+      },
+      success:function(json){
+        console.log(json);
+        $('#msg').html(json.message);
+      
+      }
+    });
+  });
+  });
+
+  
+  </script>
+
+   <body style="background-image: url('http://eskipaper.com/images/book-background-1.jpg');">
+      <br><br><br><br><br><br><br><br><br>
+
+      <h2 style="text-align: center; color:#D1CF46;">Please Create a Account!</h2>
+  <div class="container">
+    <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="username"required>
+  <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email"required>
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="password"required>
+
+   
+   
+    <p style="color:grey; font-size:15px;">Please now Login <a href="login.html">here</a>.</p>
+
+    <div class="clearfix">
+   
+      <button class="signupbtn">Sign Up</button>
+      <p id="msg"></p>
+    </div>
+  </div>
+
+
+
+
+    </body>
+</html>

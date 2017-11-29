@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html align="middle">
+	<!-- HEAD section, links to Bootstrap, jQuery, and local files -->
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="main.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="main.js"></script>
+
+		<style>
+		.navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      width: 100%;
+    }
+    
+   
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    body{
+    background-image:url('https://cdn04.masterstudies.com/element_db/23/23615_MCM3.jpg'); 
+    background-size: cover;
+    	height:80%;
+   
+
+   
+    }
+  
+
+    .sidenav {
+    width: 150px;
+    position: fixed;
+    z-index: 1;
+    top: 130px;
+    left: 10px;
+    background: #eee;
+      opacity: 0.8;
+    overflow-x: hidden;
+    padding: 8px 0;
+    border-radius: 	5px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #2196F3;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #064579;
+}
+
+.main {
+    margin-left: 140px; /* Same width as the sidebar + left position in px */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+	</style>
+	</head>
+
+	<body style="background-image:url('http://digitallearning.eletsonline.com/wp-content/uploads/2017/02/Higher-Education.jpg'); background-position: cover; ">
+		<div class="sidenav">
+  		<a href="index.html"><button type="button" class="btn btn-primary">home</button></a>
+		<a href="Njoftime.html"><button type="button" class="btn btn-primary">Njoftime</button></a>
+		<a href="Orari.html"><button type="button" class="btn btn-primary">Orari</button></a>
+		<a href="index.html"><button type="button" class="btn btn-primary">Logout</button></a>
+
+ 
+		</div>
+
+		<br><br><br>
+		<div class="row" style="margin-left:280px;">
+			<div class="col-md-8">
+				<h3>Hidhni te dhenat e studenteve </h3>
+				<h3 id="message" style="background-color: white; color:black;"></h3>
+				<!-- Text fields where data will be typed. Each of them has a unique assigned ID. -->
+				<input type="text" placeholder="Name..." class="form-control" id="name">
+				<input type="text" placeholder="Surname..." class="form-control" id="surname">
+				<input type="text" placeholder="E-mail..." class="form-control" id="email">
+				
+				<input type="text" placeholder="mungesat" class="form-control" id="mungesat">
+                <input type="text" placeholder="nota programimIOritura" class="form-control" id="programimIorientuar">
+               <input type="text" placeholder="nota java" class="form-control" id="java">
+               <input type="text" placeholder="nota arkitekutre" class="form-control" id="arkitekture">
+                <input type="text" placeholder="nota visual basic" class="form-control" id="visualbasic">
+
+				<!-- When we click this button, the data gets submitted. -->
+				<button class="btn btn-success">Enter to database</button>
+			</div>
+
+			
+
+	</body>
+</html>
+
